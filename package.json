@@ -1,0 +1,20 @@
+{
+  "name": "harryandwilly",
+  "version": "0.0.0",
+  "description": "harry and will's website challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "will moritz and harry difrancesco",
+  "license": "BSD",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "express": "~4.13.3"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0"
+  }
+}
