@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: url("harryandwilly/public/font/Josefin-Sans"); }
+
 @-webkit-keyframes rotating {
   from {
     -ms-transform: rotate(0deg);
@@ -36,5 +40,5 @@
   -o-animation: rotating 4s linear infinite;
   animation: rotating 4s linear infinite; }
 
-.some-thing {
-  color: red; }
+body {
+  background-color: #C0C0C0; }
