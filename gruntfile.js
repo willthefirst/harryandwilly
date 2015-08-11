@@ -2,9 +2,16 @@ module.exports = function(grunt) {
   grunt.initConfig ({
     sass: {
       dist: {
-        files: {
-          'public/stylesheets/style.css' : 'sass/style.scss'
-        }
+        files: [
+          {'public/stylesheets/style.css' : 'sass/style.scss'},
+          {
+            expand: true,
+            cwd: 'sass/pages/',
+            src: ['*.scss'],
+            dest: 'public/stylesheets/pages/',
+            ext: '.css'
+          }
+        ]
       }
     },
 
@@ -13,7 +20,7 @@ module.exports = function(grunt) {
         files: ['sass/**/*.scss'],
         tasks: ['sass'],
         options: {
-          livereload: true, // needed to run LiveReload
+          livereload: false, // needed to run LiveReload
         }
       }
     }

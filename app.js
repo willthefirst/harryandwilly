@@ -10,14 +10,14 @@ app.set('view engine', 'ejs'); // use either jade or ejs
 // instruct express to server up static assets
 app.use(express.static('public'));
 
-// set routes
+// Routes!
 app.get('/', function(req, res) {
   res.render('index');
 });
 
-// today's site new_site
-app.get('/first_page', function(req, res) {
-  res.render('first_page');
+// Sample page sample_page
+app.get('/sample_page', function(req, res) {
+  res.render('sample_page');
 });
 
 // Set server port
