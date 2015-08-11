@@ -15,6 +15,11 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
+// today's site new_site
+app.get('/first_page', function(req, res) {
+  res.render('first_page');
+});
+
 // Set server port
 app.listen(process.env.PORT || 3000)
 console.log('server is running');
