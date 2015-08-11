@@ -13,6 +13,11 @@
 @import "typography";
 @import "buttons";
 
-h1 {
-  color: orange;
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: url('harryandwilly/public/font/Josefin-Sans');
+}
+
+body {
+  background-color: #C0C0C0;
 }

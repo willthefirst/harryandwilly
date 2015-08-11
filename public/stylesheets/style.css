@@ -35,5 +35,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-h1 {
-  color: orange; }
+@font-face {
+  font-family: 'Josefin-Sans';
+  src: url("harryandwilly/public/font/Josefin-Sans"); }
+
+body {
+  background-color: #C0C0C0; }
