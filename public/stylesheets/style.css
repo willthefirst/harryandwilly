@@ -37,7 +37,7 @@ table {
 
 @font-face {
   font-family: 'Josefin-Sans';
-  src: url("harryandwilly/public/font/Josefin-Sans"); }
+  src: url("/fonts/Josefin-Sans"); }
 
 body {
   background-color: #C0C0C0; }
