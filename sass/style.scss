@@ -19,5 +19,21 @@
 }
 
 body {
-  background-color: #C0C0C0;
+  background-color: #F7F7F7;
+  font-size: 18px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 12px 0 40px;
+}
+
+.wrapper {
+  margin: 30px auto 0;
+  max-width: 90%;
+}
+
+ul,ol > li {
+  margin: 8px 0;
 }
