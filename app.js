@@ -20,6 +20,11 @@ app.get('/sample_page', function(req, res) {
   res.render('sample_page');
 });
 
+// Day 4: Crazy Typer
+app.get('/crazy-typer', function(req, res) {
+  res.render('crazytyper');
+});
+
 // Set server port
 app.listen(process.env.PORT || 3000)
 console.log('server is running');
