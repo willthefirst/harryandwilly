@@ -8,16 +8,18 @@
     <script src="/js/pages/crazy_typer.js"></script>
   </head>
   <body ng-controller="CrazyController" ng-keypress="crazyFunction($event)">
-      <h1>Crazy Typer</h1>
-      <p>
-        <span ng-repeat="letter in crazy_text track by $index"
-        style="
-        font-size: {{ letter.size }};
-        color: {{ letter.color }};
-        margin: {{ letter.margin }};
-        ">
-          {{ letter.character }}
-        </span>
-      </p>
+      <div class="wrapper">
+        <h1>Crazy Typer</h1>
+        <p>
+          <span ng-repeat="letter in crazy_text track by $index"
+          style="
+          font-size: {{ letter.size }};
+          color: {{ letter.color }};
+          margin: {{ letter.margin }};
+          ">
+            {{ letter.character }}
+          </span>
+        </p>
+      </div>
   </body>
 </html>
