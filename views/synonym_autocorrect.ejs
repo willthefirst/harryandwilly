@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="synonymAutocorrect">
+  <head>
+    <meta charset="utf-8">
+    <title>Synonym Autocorrect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="/js/pages/synonym_autocorrect.js"></script>
+  </head>
+  <body>
+    <h1>Synonym Autocorrect</h1>
+    <div ng-controller="Replacer">
+      <input type="text" name="initial" placeholder="Start typing..." ng-model="initial" ng-keypress="replaceWord($event)">
+      <p>
+        <span ng-repeat="word in words track by $index">
+          {{ word }}
+        </span>
+      </p>
+    </div>
+  </body>
+</html>

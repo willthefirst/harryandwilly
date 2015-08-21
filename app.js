@@ -25,6 +25,12 @@ app.get('/crazy-typer', function(req, res) {
   res.render('crazytyper');
 });
 
+// Day 7: Synoym Autocorrect
+app.get('/synonym-autocorrect', function(req, res) {
+  res.render('synonym_autocorrect');
+});
+
+
 // Set server port
 app.listen(process.env.PORT || 3000)
 console.log('server is running');
