@@ -20,6 +20,11 @@ app.get('/sample_page', function(req, res) {
   res.render('sample_page');
 });
 
+// Day 2: Which Day?
+app.get('/which-day', function(req, res) {
+  res.render('which_day');
+});
+
 // Day 4: Crazy Typer
 app.get('/crazy-typer', function(req, res) {
   res.render('crazytyper');
