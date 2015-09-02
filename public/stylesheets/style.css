@@ -40,17 +40,20 @@ table {
   src: url("/fonts/Josefin-Sans"); }
 
 body {
-  background-color: #F7F7F7;
+  background-color: #FFFFFF;
   font-size: 18px;
   font-family: Verdana, Geneva, sans-serif; }
-
-h1 {
-  font-size: 48px;
-  margin: 12px 0 40px; }
 
 .wrapper {
   margin: 30px auto 0;
   max-width: 90%; }
+
+.header {
+  position: relative;
+  color: #000000; }
+
+.header h4 {
+  color: red; }
 
 ul, ol > li {
   margin: 8px 0; }
