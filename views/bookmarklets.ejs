@@ -11,7 +11,7 @@
     	var elements = '0123456789ABCDEF'.split('');
     	var theColor = '#';
     	for(var i = 0; i <= 5; i++){
-    		theColor += letters[Math.floor(Math.random()*16)];
+    		theColor += elements[Math.floor(Math.random()*16)];
     	}
     	return theColor;
     }
