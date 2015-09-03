@@ -20,7 +20,12 @@ app.get('/sample_page', function(req, res) {
   res.render('sample_page');
 });
 
-// // Day 2: Which Day?
+// Sample page sample_page
+app.get('/just-baseball-gifs', function(req, res) {
+  res.render('just_baseball_gifs');
+});
+
+// // Day 5: Which Day?
 // app.get('/which-day', function(req, res) {
 //   res.render('which_day');
 // });
