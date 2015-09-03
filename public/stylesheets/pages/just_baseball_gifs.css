@@ -67,11 +67,7 @@ ul, ol > li {
   width: 100px; }
 
 .gif-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px; }
+  text-align: center; }
 
 h1 {
   text-align: center; }
@@ -79,3 +75,7 @@ h1 {
 .btn
 .btn btn-default {
   display: none; }
+
+.buttons {
+  margin-bottom: 30px;
+  text-align: center; }
