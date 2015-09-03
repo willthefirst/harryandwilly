@@ -58,5 +58,13 @@ body {
 ul, ol > li {
   margin: 8px 0; }
 
+#harry {
+  float: right;
+  width: 100px; }
+
+#will {
+  float: right;
+  width: 100px; }
+
 input::-webkit-calendar-picker-indicator {
   display: none; }
