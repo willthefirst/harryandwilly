@@ -65,3 +65,6 @@ ul, ol > li {
 #will {
   float: right;
   width: 100px; }
+
+body {
+  background-color: red; }
