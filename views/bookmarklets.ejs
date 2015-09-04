@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/stylesheets/pages/bookmarklets.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script>
+   <script>
     var randomizeColors = function(){
     	var elements = '0123456789ABCDEF'.split('');
     	var theColor = '#';
@@ -17,18 +16,31 @@
     }
     var randomColor = randomizeColors();
     </script>
-
   </head>
   <body>
+   
     <div class="container-fluid">
       <h1>Bookmarklets</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate error natus iure, voluptates dolorum. Eius sequi facere sed necessitatibus voluptatibus maiores, quas sunt vel quasi veritatis magni ipsa voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime repellendus, quo ex libero ipsam ratione neque. Totam fuga doloremque expedita, quibusdam quas consequatur, vel nulla unde aut, voluptate, ab praesentium.</p>
-      <a href="javascript:void( document.body.style.
-      fontColor='randomColor')">Colorify</a>
-      <a href="javascript:void( document.body.style.fontStyle='italic')">Italify</a>
-      <a href="javascript:void( document.body.style.fontWeight='bold')">Boldify</a>
-      
+      <h4>Below are three bookmarklets. What's a bookmarklet you ask? Well, in the off chance you want to turn text a random color, italicize text, or bold text you can use our bookmarklets to do so. Just drag and drop onto your bookmark bar and you will be able to colorify, italify and boldify any webpage you find yourself on. Try below!<h4>
 
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum voluptate error natus iure, voluptates dolorum. Eius sequi facere sed necessitatibus voluptatibus maiores, quas sunt vel quasi veritatis magni ipsa voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime repellendus, quo ex libero ipsam ratione neque. Totam fuga doloremque expedita, quibusdam quas consequatur, vel nulla unde aut, voluptate, ab praesentium.</p>
+      <div class="btn-group btn-group-justified" role="group">
+      <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default"><a href="javascript:void( document.body.style.
+      fontColor='randomColor')"><font color="red">Colorify</a></font>
+      </button>
+      </div>
+      <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default"><a href="javascript:void( document.body.style.fontStyle='italic')"><i>Italify</i></a>
+      </button>
+      </div>
+      <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default">
+      <a href="javascript:void( document.body.style.fontWeight='bold')"><b>Boldify</b></a>
+      </button>
+      </div>     	
+      </div>
+      </div>
     </div>
   </body>
 </html>
