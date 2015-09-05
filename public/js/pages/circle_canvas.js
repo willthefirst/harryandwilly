@@ -3,6 +3,8 @@ $(document).ready(function() {
   // We can change our parameters here.
   var params = {
     bgColor : "rgb(312,311,3)"
+    // maxRad: 150px;
+    // minRad: 10px;
   }
 
   // Initialize canvas
@@ -17,11 +19,15 @@ $(document).ready(function() {
   ctx.fillStyle = params.bgColor;
   ctx.fillRect(0,0,canvas.width,canvas.height);
 
+  //Defines Radius of Circle
+  
+  
   // Draws a circles
   var drawCircle = function( x , y ) {
+    var radius = Math.floor(Math.random() * (150 - 10 +1 ) + 10);
       console.log(x, y);
       ctx.beginPath();
-      ctx.arc(x,y,50,0,2*Math.PI);
+      ctx.arc(x,y,radius,0,2*Math.PI);
       ctx.stroke();
   }
 
