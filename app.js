@@ -30,6 +30,12 @@ app.get('/bookmarklets', function(req, res) {
   res.render('bookmarklets');
 });
 
+// Day 4: Circle Canvas
+app.get('/circle-canvas', function(req, res) {
+  res.render('circle_canvas');
+});
+
+
 
 
 // // Day 5: Which Day?
