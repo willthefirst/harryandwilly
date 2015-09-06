@@ -65,6 +65,3 @@ ul, ol > li {
 #will {
   float: right;
   width: 100px; }
-
-input::-webkit-calendar-picker-indicator {
-  display: none; }

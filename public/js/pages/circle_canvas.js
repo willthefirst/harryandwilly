@@ -24,7 +24,7 @@ $(document).ready(function() {
   
   // Draws a circles
   var drawCircle = function( x , y ) {
-    var radius = Math.floor(Math.random() * (150 - 10 +1 ) + 10);
+    var radius = Math.floor(Math.random() * (150 - 1 +1 ) + 1);
       console.log(x, y);
       ctx.beginPath();
       ctx.arc(x,y,radius,0,2*Math.PI);
