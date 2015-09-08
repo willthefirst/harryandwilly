@@ -67,8 +67,6 @@ ul, ol > li {
   width: 100px; }
 
 #the-clock {
-  height: 300px;
-  width: 300px;
   background-color: #fff;
   margin: 30px auto;
   display: block; }
