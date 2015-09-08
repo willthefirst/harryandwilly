@@ -36,22 +36,20 @@ app.get('/circle-canvas', function(req, res) {
 });
 
 
+// Day 5: Which Day?
+app.get('/which-day', function(req, res) {
+  res.render('which_day');
+});
 
+// Day 4: Crazy Typer
+app.get('/crazy-typer', function(req, res) {
+  res.render('crazytyper');
+});
 
-// // Day 5: Which Day?
-// app.get('/which-day', function(req, res) {
-//   res.render('which_day');
-// });
-
-// // Day 4: Crazy Typer
-// app.get('/crazy-typer', function(req, res) {
-//   res.render('crazytyper');
-// });
-
-// // Day 7: Synoym Autocorrect
-// app.get('/synonym-autocorrect', function(req, res) {
-//   res.render('synonym_autocorrect');
-// });
+// Day 7: Synoym Autocorrect
+app.get('/synonym-autocorrect', function(req, res) {
+  res.render('synonym_autocorrect');
+});
 
 
 // Set server port
