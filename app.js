@@ -40,6 +40,7 @@ app.get('/which-day', function(req, res) {
    res.render('which_day');
 });
 
+
 // Day 6: Synoym Autocorrect
 app.get('/synonym-autocorrect', function(req, res) {
   res.render('synonym_autocorrect');
