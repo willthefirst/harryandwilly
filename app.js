@@ -50,7 +50,7 @@ app.get('/crazy-typer', function(req, res) {
   res.render('crazy_typer');
 });
 
-// Day 7: The Clock
+// Day 8: The Clock
 app.get('/the-clock', function(req, res) {
   res.render('the_clock');
 });
