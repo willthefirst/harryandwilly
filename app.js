@@ -55,6 +55,11 @@ app.get('/the-clock', function(req, res) {
   res.render('the_clock');
 });
 
+// Day 9: Infinite Chest
+app.get('/infinite-chest', function(req, res) {
+  res.render('infinite_chest');
+});
+
 
 
 

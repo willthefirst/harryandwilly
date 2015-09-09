@@ -1,0 +1,18 @@
+body {
+  font-family: Garamond, Georgia, serif; }
+
+.dfw {
+  display: block; }
+
+.dwf-wrapper {
+  float: left; }
+
+.content-wrapper {
+  position: fixed;
+  left: 472px;
+  right: 0;
+  padding: 40px 50px 0 100px;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  top: 0; }
