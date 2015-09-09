@@ -66,7 +66,28 @@ ul, ol > li {
   float: right;
   width: 100px; }
 
+@font-face {
+  font-family: 'josefin-slab';
+  src: url("/fonts/JosefinSlab-Regular.ttf"); }
+
+.navbar-header {
+  display: inline-block;
+  margin-left: 430px; }
+
+.navbar-header h1 {
+  color: #000000; }
+
+h1 {
+  font-family: josefin-slab; }
+
+.clock-holder {
+  background-color: #580000;
+  border-style: solid;
+  border-width: 2.5px;
+  border-color: #000;
+  border-radius: 5px; }
+
 #the-clock {
-  background-color: #fff;
+  background-color: #580000;
   margin: 30px auto;
   display: block; }
