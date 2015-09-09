@@ -45,10 +45,12 @@ app.get('/synonym-autocorrect', function(req, res) {
   res.render('synonym_autocorrect');
 });
 
+
 // Day 7: Crazy Typer
 app.get('/crazy-typer', function(req, res) {
   res.render('crazy_typer');
 });
+
 
 // Day 8: The Clock
 app.get('/the-clock', function(req, res) {
@@ -59,6 +61,7 @@ app.get('/the-clock', function(req, res) {
 app.get('/infinite-chest', function(req, res) {
   res.render('infinite_chest');
 });
+
 
 
 
