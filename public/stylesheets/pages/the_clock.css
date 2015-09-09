@@ -81,13 +81,13 @@ h1 {
   font-family: josefin-slab; }
 
 .clock-holder {
-  background-color: #580000;
+  background-color: #fff;
   border-style: solid;
   border-width: 2.5px;
   border-color: #000;
   border-radius: 5px; }
 
 #the-clock {
-  background-color: #580000;
+  background-color: #fff;
   margin: 30px auto;
   display: block; }
