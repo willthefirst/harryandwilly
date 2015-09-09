@@ -21,14 +21,17 @@ $(document).ready(function() {
         ctx.beginPath();
         ctx.arc(square_center, square_center, radius - padding, -0.5 * Math.PI, (percent * 2 * Math.PI - 0.5 * Math.PI));
         ctx.lineWidth = 15;
-        ctx.stroke();
+        ctx.stroke(); 
+        }
     }
 
     // Update the canvas Clock
     var updateCanvasClock = function(hour, minute, second) {
-        var hourHand = drawClock(hour, 24, square_center);
-       var minuteHand = drawClock(minute, 60, square_center - (spacing));
-       var secondHand = drawClock(second, 60, square_center - (spacing * 2));
+      var hourHand = drawClock(hour, 24, square_center);
+      var minuteHand = drawClock(minute, 60, square_center - (spacing));
+      var secondHand = drawClock(second, 60, square_center - (spacing * 2));
+      
+
    
     }
 
