@@ -21,37 +21,80 @@ $(document).ready(function() {
         ctx.beginPath();
         ctx.arc(square_center, square_center, radius - padding, -0.5 * Math.PI, (percent * 2 * Math.PI - 0.5 * Math.PI));
         ctx.lineWidth = 15;
-        ctx.stroke(); 
+        ctx.stroke();
+    }
+
+
+    // Update the canvas Clock: Seconds, Minutes, Hours
+    var updateSecondHand = function(second) {
+        var secondHand = drawClock(second, 60, square_center - (spacing * 2));
+    }
+
+    var updateMinuteHand = function(minute) {
+        var minuteHand = drawClock(minute, 60, square_center - (spacing));
+    }
+
+    var updateHourHand = function(hour) {
+        var hourHand = drawClock(hour, 12, square_center);
+    }
+   
+   //Overwrite each hand with white
+    var clearSecondHand = function(){
+      ctx.beginPath();
+      ctx.arc(square_center, square_center, 120, 0, Math.PI*2, true); 
+      ctx.closePath();
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+    }   
+
+    var clearMinuteHand = function() {
+      ctx.beginPath();
+      ctx.arc(square_center, square_center, 140, 0, Math.PI*2, true); 
+      ctx.closePath();
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+    }   
+
+    var clearHourHand = function() {
+      ctx.beginPath();
+      ctx.arc(square_center, square_center, 160, 0, Math.PI*2, true); 
+      ctx.closePath();
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+    } 
+
+    
+    
+
+    //Updating the clock
+    var getTime = function() {
+      var currTime = new Date();
+      var hours = currTime.getHours();
+      var minutes = currTime.getMinutes();
+      var seconds = currTime.getSeconds(); 
+      if (hours > 12){
+        var hours = currTime.getHours()-12;
+        }
+        updateSecondHand(seconds);
+        updateMinuteHand(minutes);
+        updateHourHand(hours);
+console.log(seconds);
+        if (seconds == 59) {
+            updateMinuteHand(minutes);
+            clearSecondHand();
+        }
+        if (minutes == 59) {
+            updateHourHand(hours);
+            clearMinuteHand();
+        }
+        if (hours==11) {
+          clearHourHand();
         }
     }
+     
 
-    // Update the canvas Clock
-    var updateCanvasClock = function(hour, minute, second) {
-      var hourHand = drawClock(hour, 24, square_center);
-      var minuteHand = drawClock(minute, 60, square_center - (spacing));
-      var secondHand = drawClock(second, 60, square_center - (spacing * 2));
-      
 
-   
-    }
-
-    //Getting current time in hrs, mins, secs
-    var getTime = function () {
-    var currTime = new Date();
-    var hours = currTime.getHours();
-    var minutes = currTime.getMinutes();
-    var seconds = currTime.getSeconds();
-
-    updateCanvasClock(hours, minutes, seconds);
-
-    }
-
-    
-    //calling get time every 1/2 second
-    setInterval(getTime, 500);
-    
-    
+      //calling get time every 1/2 second
+      setInterval(getTime, 500);
 
 });
-
-
