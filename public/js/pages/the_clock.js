@@ -4,6 +4,7 @@ $(document).ready(function() {
     var square_dims = 300;
     var padding = 30;
     var spacing = 20;
+    var clock_color = "#580000";
 
     var square_center = square_dims / 2 + padding;
 
@@ -17,13 +18,13 @@ $(document).ready(function() {
 
     // Draws the progress
     var drawClock = function(current, total, radius) {
-        var percent = current / total;
-        ctx.beginPath();
-        ctx.arc(square_center, square_center, radius - padding, -0.5 * Math.PI, (percent * 2 * Math.PI - 0.5 * Math.PI));
-        ctx.lineWidth = 15;
-        ctx.stroke();
+      var percent = current / total;
+      ctx.beginPath();
+      ctx.arc(square_center, square_center, radius - padding, -0.5 * Math.PI, (percent * 2 * Math.PI - 0.5 * Math.PI));
+      ctx.lineWidth = 15;
+      ctx.strokeStyle = clock_color;
+      ctx.stroke();
     }
-
 
     // Update the canvas Clock: Seconds, Minutes, Hours
     var updateSecondHand = function(second) {
@@ -36,6 +37,7 @@ $(document).ready(function() {
 
     var updateHourHand = function(hour) {
         var hourHand = drawClock(hour, 12, square_center);
+
     }
    
    //Overwrite each hand with white
@@ -63,8 +65,6 @@ $(document).ready(function() {
       ctx.fill();
     } 
 
-    
-    
 
     //Updating the clock
     var getTime = function() {
@@ -78,7 +78,6 @@ $(document).ready(function() {
         updateSecondHand(seconds);
         updateMinuteHand(minutes);
         updateHourHand(hours);
-console.log(seconds);
         if (seconds == 59) {
             updateMinuteHand(minutes);
             clearSecondHand();
@@ -87,7 +86,7 @@ console.log(seconds);
             updateHourHand(hours);
             clearMinuteHand();
         }
-        if (hours==11) {
+        if (hours==12) {
           clearHourHand();
         }
     }
