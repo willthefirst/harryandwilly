@@ -62,6 +62,10 @@ app.get('/infinite-chest', function(req, res) {
   res.render('infinite_chest');
 });
 
+// Sample page sample_page
+app.get('/just-headlines', function(req, res) {
+  res.render('just_headlines');
+});
 
 
 
