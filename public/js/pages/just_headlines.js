@@ -1,7 +1,17 @@
 $(document).ready(function() {
 
-  var URL_NYT = "";
-  var URL_ATL = "";
+  // Parameters
+  var params = {
+    opinions: [
+      "Have you read $TITLE by $AUTHOR yet? You should.",
+      "You can't call yourself educated unless you've read this: $TITLE.",
+      "I spit my double latte all over my Mac Air after seeing this: $TITLE.",
+      "$AUTHOR really hit the nail on the head, can't believe this is not more of an issue.",
+      "Where does $AUTHOR come up with bullshit: $TITLE.",
+      "This reads like it was written by 100 monkeys shitting on a typewriter: $TITLE."
+    ]
+  }
+
   var URL_ELITE = "http://elitedaily.com/feed/";
 
   // Get Elite Daily's RSS feed
@@ -40,17 +50,9 @@ $(document).ready(function() {
   }
 
   function opinionate( author, title ) {
-    var opinions = [
-      "Have you read $TITLE by $AUTHOR yet? You should.",
-      "You can't call yourself educated unless you've read this: $TITLE.",
-      "I spit my double latte all over my Mac Air after seeing this: $TITLE.",
-      "$AUTHOR really hit the nail on the head, can't believe this is not more of an issue.",
-      "Where does $AUTHOR come up with bullshit: $TITLE.",
-      "This reads like it was written by 100 monkeys shitting on a typewriter: $TITLE."
-    ]
-    for (var i = 0; i < opinions.length; i++) {
-      opinions[i] = opinions[i].replace("$AUTHOR" , author).replace("$TITLE" , '"'+title+'"');
+    for (var i = 0; i < params.opinions.length; i++) {
+      params.opinions[i] = params.opinions[i].replace("$AUTHOR" , author).replace("$TITLE" , '"'+title+'"');
     }
-    return opinions[Math.floor(Math.random() * opinions.length)];
+    return params.opinions[Math.floor(Math.random() * params.opinions.length)];
   }
 });
