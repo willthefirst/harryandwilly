@@ -62,9 +62,14 @@ app.get('/infinite-chest', function(req, res) {
   res.render('infinite_chest');
 });
 
-// Sample page sample_page
+// Day 10: Just Headlines
 app.get('/just-headlines', function(req, res) {
   res.render('just_headlines');
+});
+
+// Day 11: Dot Game
+app.get('/simple-game', function(req, res) {
+  res.render('simple_game');
 });
 
 
