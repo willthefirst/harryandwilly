@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
   var misses = 0;
 
   // Event handling
-  addEventListener("mousedown", function(e) {
+  addEventListener("click", function(e) {
     // Is the click in the dot
     if (Math.sqrt((e.x-dot.x)*(e.x-dot.x) + (e.y-dot.y)*(e.y-dot.y)) < dot.r) {
       hits++;
