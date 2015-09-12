@@ -67,10 +67,16 @@ app.get('/just-headlines', function(req, res) {
   res.render('just_headlines');
 });
 
-// Day 11: Dot Game
+// Day 11: Simple Game
 app.get('/simple-game', function(req, res) {
   res.render('simple_game');
 });
+
+// Day 12: Dot Game
+app.get('/dot-game', function(req, res) {
+  res.render('dot_game');
+});
+
 
 
 
