@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
   // Create the canvas
   var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
-  console.log(window);
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   document.getElementById("game-container").appendChild(canvas);
@@ -14,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
   	x: canvas.width/2,
   	y: canvas.height/2,
     r: 40, // Radius
+    minRadius: 10,
+    maxRadius: 80,
     color: "rgb(249, 205, 73)"
   };
 
@@ -22,27 +23,28 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   // Event handling
   addEventListener("mousedown", function(e) {
-
+    // Is the click in the dot
+    if (Math.sqrt((e.x-dot.x)*(e.x-dot.x) + (e.y-dot.y)*(e.y-dot.y)) < dot.r) {
+      hits++;
+      reset();
+    } else {
+      misses++;
+    }
+    console.log("Hits: " + hits + " | Misses: " + misses);
   }, false);
 
   // Reset the game when the player click a dot
   var reset = function () {
-    // Move the dot somewhere new
+    // Resize the dot
+    dot.r = Math.random() * (dot.maxRadius - dot.minRadius) + dot.minRadius;
+
+    // Color the dot
+    dot.color = getRandomColor();
+
+    // Move the dot
+    dot.x = Math.random() * ((canvas.width-dot.r) - dot.r) + dot.r;
+    dot.y = Math.random() * ((canvas.height-dot.r) - dot.r) + dot.r;
   };
-
-  // Update game objects
-  var update = function () {
-
-  }
-
-  var updateFastestCatch = function() {
-    var caught_now = Date.now();
-    var catchTime = caught_now - lastCatch;
-    lastCatch = caught_now;
-    if (catchTime <= fastestCatch) {
-      fastestCatch = catchTime;
-    }
-  }
 
   // Draw everything
   var render = function () {
@@ -57,6 +59,16 @@ document.addEventListener("DOMContentLoaded", function(e) {
     ctx.arc(dot.x, dot.y, dot.r , 0 , 2*Math.PI);
     ctx.fill();
     ctx.stroke();
+
+    // Draw score
+    ctx.fillStyle = "rgb(250, 250, 250)";
+    ctx.font = "14px Comic Sans MS";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.fillText("Hits: " + hits, 4, 0);
+    ctx.fillText("Misses: " + misses, 4, 18);
+
+
   };
 
   // Cross-browser support for requestAnimationFrame
@@ -68,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
   	var now = Date.now();
   	var delta = now - then;
 
-  	update(delta / 1000);
   	render();
 
   	then = now;
@@ -79,7 +90,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
   // Let's play this game!
   var then = Date.now();
-  var lastCatch = Date.now();
   reset();
   main();
 });
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
