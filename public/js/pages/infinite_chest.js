@@ -8,7 +8,6 @@ $(document).ready(function() {
   var quarter_screen;
   $(window).scroll(function(e){
     scroll_percent = ($(this).scrollTop() + $(this).height())/window_height;
-    console.log($(this), window_height);
     $(".pages-read").html(Math.round(scroll_percent*1079));
     $(".footnotes-read").html(Math.round(scroll_percent*332));	
     available = $(document).height();
