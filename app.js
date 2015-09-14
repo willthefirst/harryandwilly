@@ -77,6 +77,10 @@ app.get('/dot-game', function(req, res) {
   res.render('dot_game');
 });
 
+// Day 13: Speed Numbers
+app.get('/speed-numbers', function(req, res) {
+  res.render('speed_numbers');
+});
 
 
 
