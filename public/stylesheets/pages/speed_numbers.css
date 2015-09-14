@@ -1,2 +1,14 @@
-body {
-  margin: 0; }
+#number {
+  font-size: 200px;
+  position: fixed;
+  /* bring your own prefixes */
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%); }
+
+.score {
+  color: #000;
+  text-shadow: 0 0 10px #fff;
+  font-size: 30px;
+  margin: 0;
+  font-size: arial sans-serif; }
