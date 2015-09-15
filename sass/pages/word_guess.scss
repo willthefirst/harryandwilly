@@ -12,4 +12,9 @@
   display: inline-block;
   width: 40px;
   margin: 0 8px;
+  color: transparent;
+
+  &.found {
+    color:#000;
+  }
 }

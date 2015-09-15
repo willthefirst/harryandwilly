@@ -7,7 +7,7 @@ var word = "";
 var reset = function() {
   // Set a new word to guess
   word = answers[Math.floor(Math.random()*answers.length)];
-  console.log(word, word.length);
+  console.log(word);
   // Create the empty spaces on the page
   for (var i = 0; i < word.length; i++) {
     $(".word").append('<span class="word-letter">' + word[i] + '</span>');
@@ -21,8 +21,15 @@ $(document).ready(function() {
 
   // Listen for key input
   $(document).on('keyup', function(e) {
-    console.log(String.fromCharCode(e.which));
-  });
+    var keyPressed = String.fromCharCode(e.which).toLowerCase();
+    var selector = ".word-letter:contains(" + keyPressed + ")";
 
+    // Is keyPressed is in the word?
+    if (word.indexOf(keyPressed) > -1) {
+      $(selector).addClass("found");
+    } else {
+      console.log("wrong");
+    }
+  });
 
 });

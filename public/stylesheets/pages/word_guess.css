@@ -76,4 +76,7 @@ ul, ol > li {
   padding-bottom: 8px;
   display: inline-block;
   width: 40px;
-  margin: 0 8px; }
+  margin: 0 8px;
+  color: transparent; }
+  .word-letter.found {
+    color: #000; }
