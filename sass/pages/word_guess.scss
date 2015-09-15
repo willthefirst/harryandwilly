@@ -1,0 +1,20 @@
+@import "../style";
+
+.word {
+  margin-top: 50px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.word-letter {
+  border-bottom: 3px solid #666;
+  padding-bottom: 8px;
+  display: inline-block;
+  width: 40px;
+  margin: 0 8px;
+  color: transparent;
+
+  &.found {
+    color:#000;
+  }
+}
