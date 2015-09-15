@@ -72,8 +72,7 @@ ul, ol > li {
 h1 {
   text-align: center; }
 
-.btn
-.btn btn-default {
+.btn .btn btn-default {
   display: none; }
 
 .buttons {

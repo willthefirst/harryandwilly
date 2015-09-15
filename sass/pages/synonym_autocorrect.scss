@@ -1,12 +1,10 @@
 @import "../style";
-
 .input-replace {
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  background: inherit;
-
-  &:focus {
-    outline: none;
-  }
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    background: inherit;
+    &:focus {
+        outline: none;
+    }
 }
