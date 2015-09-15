@@ -82,6 +82,11 @@ app.get('/speed-numbers', function(req, res) {
   res.render('speed_numbers');
 });
 
+// Day 14: Speed Numbers
+app.get('/word-guess', function(req, res) {
+  res.render('word_guess');
+});
+
 
 
 
