@@ -1,7 +1,7 @@
 (function() {
 
   // Params
-  var spacing = 100; // spacing between circles
+  var spacing = 80; // spacing between circles
   var growthFactor = 5; // how quickly the circles grow
 
   // Initialize canvas
@@ -13,7 +13,7 @@
   document.getElementsByTagName('body')[0].appendChild(canvas);
 
   colors = [
-    "#000", "#fff", "red"
+    "#000", "#fff"
   ]
 
   // Alternates colors of drawn circles.
@@ -33,7 +33,6 @@
   // Grow a circle
   var drawIt = function(color) {
     var i = 0;
-    console.log("Circle #: " + circles + " color= " + color);
     return function draw() {
       ctx.fillStyle = color;
       ctx.beginPath();
