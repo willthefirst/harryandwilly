@@ -87,6 +87,11 @@ app.get('/word-guess', function(req, res) {
   res.render('word_guess');
 });
 
+// Day 15: Something Freaky
+app.get('/something-freaky', function(req, res) {
+  res.render('something_freaky');
+});
+
 
 
 
