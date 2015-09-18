@@ -66,6 +66,9 @@ ul, ol > li {
   float: right;
   width: 100px; }
 
+body {
+  font-size: 50px; }
+
 .word {
   margin-top: 50px;
   font-size: 50px;
@@ -80,3 +83,11 @@ ul, ol > li {
   color: transparent; }
   .word-letter.found {
     color: #000; }
+  .word-letter.victory {
+    color: #8aff17; }
+
+.guessed-wrong {
+  margin-top: 40px;
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: #f10505; }

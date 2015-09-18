@@ -1,5 +1,9 @@
 @import "../style";
 
+body {
+  font-size: 50px;
+}
+
 .word {
   margin-top: 50px;
   font-size: 50px;
@@ -17,4 +21,17 @@
   &.found {
     color:#000;
   }
+
+  &.victory {
+    color: rgb(138, 255, 23);
+  }
+
+
+}
+
+.guessed-wrong {
+  margin-top: 40px;
+  text-decoration: line-through;
+  margin-right: 10px;
+  color: rgb(241, 5, 5);
 }

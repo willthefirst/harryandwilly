@@ -82,14 +82,14 @@ app.get('/speed-numbers', function(req, res) {
   res.render('speed_numbers');
 });
 
-// Day 14: Speed Numbers
-app.get('/word-guess', function(req, res) {
-  res.render('word_guess');
-});
-
-// Day 15: Something Freaky
+// Day 14: Something Freaky
 app.get('/something-freaky', function(req, res) {
   res.render('something_freaky');
+});
+
+// Day 15: Word Guess
+app.get('/word-guess', function(req, res) {
+  res.render('word_guess');
 });
 
 

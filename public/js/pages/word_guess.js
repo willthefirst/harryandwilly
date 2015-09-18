@@ -3,22 +3,37 @@ var answers = ["uniformise","zidkijah","bookrest","dartingness","splendiferously
 
 // The word to guess
 var word = "";
+var numFound = 0;
+var lettersGuessed = [];
 
 var reset = function() {
+  word = "";
+  numFound = 0;
+  lettersGuessed = [];
+
+  $('.word').html("");
+  $('.wrong').html("");
+
   // Set a new word to guess
   word = answers[Math.floor(Math.random()*answers.length)];
-  console.log(word);
+  
   // Create the empty spaces on the page
   for (var i = 0; i < word.length; i++) {
     $(".word").append('<span class="word-letter">' + word[i] + '</span>');
   }
 }
 
+var isAlreadyGuessed = function(letter) {
+  for (var i = 0; i < lettersGuessed.length; i++) {
+    if (lettersGuessed[i] === letter) {
+      return true;
+    }
+  }
+  return false;
+}
 
 $(document).ready(function() {
-
   reset();
-
   // Listen for key input
   $(document).on('keyup', function(e) {
     var keyPressed = String.fromCharCode(e.which).toLowerCase();
@@ -26,9 +41,23 @@ $(document).ready(function() {
 
     // Is keyPressed is in the word?
     if (word.indexOf(keyPressed) > -1) {
-      $(selector).addClass("found");
+      if (!isAlreadyGuessed(keyPressed)) {
+        numFound += $(selector).length;
+        lettersGuessed.push(keyPressed);
+        $(selector).addClass("found");
+      }
+      // If user has guessed the whole word
+      if (numFound === word.length) {
+        $('.word-letter').addClass('victory').removeClass('found');
+        window.setTimeout(function(){
+          reset();
+        }, 2000)
+      }
     } else {
-      console.log("wrong");
+      if (!isAlreadyGuessed(keyPressed)) {
+        lettersGuessed.push(keyPressed);
+        $(".wrong").append('<span class="guessed-wrong">' + keyPressed + '</span>');
+      }
     }
   });
 
