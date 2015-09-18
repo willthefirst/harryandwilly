@@ -28,15 +28,15 @@ $(document).ready(function() {
 
     // Update the canvas Clock: Seconds, Minutes, Hours
     var updateSecondHand = function(second) {
-        var secondHand = drawClock(second, 60, square_center - (spacing * 2));
+        drawClock(second, 60, square_center - (spacing * 2));
     }
 
     var updateMinuteHand = function(minute) {
-        var minuteHand = drawClock(minute, 60, square_center - (spacing));
+        drawClock(minute, 60, square_center - (spacing));
     }
 
     var updateHourHand = function(hour) {
-        var hourHand = drawClock(hour, 12, square_center);
+        drawClock(hour, 12, square_center);
 
     }
    
@@ -75,18 +75,19 @@ $(document).ready(function() {
       if (hours > 12){
         var hours = currTime.getHours()-12;
         }
+        console.log(seconds)
         updateSecondHand(seconds);
         updateMinuteHand(minutes);
         updateHourHand(hours);
-        if (seconds == 59) {
+        if (seconds == 0) {
             updateMinuteHand(minutes);
             clearSecondHand();
         }
-        if (minutes == 59) {
+        if (minutes == 0) {
             updateHourHand(hours);
             clearMinuteHand();
         }
-        if (hours==12) {
+        if (hours == 0) {
           clearHourHand();
         }
     }

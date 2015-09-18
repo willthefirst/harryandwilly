@@ -71,13 +71,11 @@ ul, ol > li {
   src: url("/fonts/JosefinSlab-Bold.ttf"); }
 
 .navbar-header {
-  display: inline-block;
-  margin-left: 410px; }
-
-.navbar-header h1 {
-  color: #000000; }
+  width: 100%;
+  text-align: center; }
 
 h1 {
+  color: #000000;
   font-family: josefin-slab; }
 
 .clock-holder {

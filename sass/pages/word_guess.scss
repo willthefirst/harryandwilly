@@ -1,20 +1,29 @@
 @import "../style";
+@font-face {
+    font-family: 'josefin-slab';
+    src: url('/fonts/JosefinSlab-Thin.ttf');
+}
 
 .word {
-  margin-top: 50px;
-  font-size: 50px;
-  text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
 }
 
 .word-letter {
-  border-bottom: 3px solid #666;
-  padding-bottom: 8px;
-  display: inline-block;
-  width: 40px;
-  margin: 0 8px;
-  color: transparent;
+    border-bottom: 3px solid #666;
+    padding-bottom: 8px;
+    display: inline-block;
+    width: 40px;
+    margin: 0 8px;
+    color: transparent;
+    &.found {
+        color: #000;
+    }
+}
 
-  &.found {
-    color:#000;
-  }
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-style: josenfin-slab;
 }
