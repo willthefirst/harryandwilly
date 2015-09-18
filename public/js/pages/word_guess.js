@@ -38,7 +38,9 @@ $(document).ready(function() {
   $(document).on('keyup', function(e) {
     var keyPressed = String.fromCharCode(e.which).toLowerCase();
     var selector = ".word-letter:contains(" + keyPressed + ")";
+    if word.includes(keyPressed){
 
+  
     // Is keyPressed is in the word?
     if (word.indexOf(keyPressed) > -1) {
       if (!isAlreadyGuessed(keyPressed)) {
@@ -62,3 +64,11 @@ $(document).ready(function() {
   });
 
 });
+
+var reset = function() {
+        var score
+        number = Math.floor(Math.random() * 10);
+        $("#number").html(number).css("color", getRandomColor());
+        $("body").css("background-color", getRandomColor());
+    };
+

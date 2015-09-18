@@ -82,6 +82,7 @@ app.get('/speed-numbers', function(req, res) {
   res.render('speed_numbers');
 });
 
+
 // Day 14: Something Freaky
 app.get('/something-freaky', function(req, res) {
   res.render('something_freaky');

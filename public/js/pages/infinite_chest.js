@@ -1,6 +1,6 @@
 $(document).ready(function() {
     window_height = $(document).height();
-    var messagesArray = ["Keep on Going, Almost There!", "Tired Yet?", "It isn't Infinite for nothing", "Wondering about the futility of it all?", "What "]
+    
     var available;
     var half_screen;
     var height;
@@ -16,8 +16,18 @@ $(document).ready(function() {
         quarter_screen = available * .75
         height = $(window).scrollTop();
         if ((height > half_screen) && (height < quarter_screen)) {
-            $("#box").show();
+            displayMessage();
         }
 
     });
 });
+
+
+var displayMessage = function(){
+var messagesArray = ["Keep on Going, Almost There!", "Tired Yet?", 
+"It isn't Infinite for nothing", "Wondering about the futility of it all?", 
+"What do you think entertainment really consists of?"]
+var randomMessage = messagesArray[Math.floor(Math.random()*messagesArray.length)];
+$("#box").append(randomMessage).show(0).delay(2000).fadeOut(300);
+
+}
